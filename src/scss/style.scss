@@ -1,0 +1,166 @@
+//!======== Шрифты;
+@import "fonts.scss";
+//!======== Цвета;
+@import "colors.scss";
+
+//===Обнуление===//
+// Обнуление отступов
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+// Меняет подсчёт ширины блока так, что контент посдстраивается под размеры блока, а не наоборот;
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+// Убирает обводку;
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+// Указывает элементы как блочные по-умолчанию;
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+// Уравнивает поведение текста в разных браузерах;
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-family: "Lato";
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	color: $text-color;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+// Наследование элементами шрифта;
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+// Придание определённых параметров некоторым элементам;
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+// Обнуление заголовков;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 400;
+}
+//===Обнуление===//
+
+// Подключение шрифтов
+//! &display=swap&subset=cyrillic-ext // &display=swap - Контроль порядка подключаемых шрифтов // &subset=cyrillic-ext - Для кириллических шрифтов;
+// @import url();
+// Подключение шрифтов
+
+// Шрифт по-умолчанию;
+$font-family: "Lato";
+// Шрифт по-умолчанию;
+
+// Переменные
+$minWidth: 320px;
+$maxWidth: 1920px;
+$maxWidthContainer: 1500px;
+$md1: $maxWidthContainer + 12;
+$md2: 1439.98px;
+$md3: 1199.98px;
+$md4: 991.98px;
+$md5: 767.98px;
+$md6: 479.98px;
+// Переменные
+
+// Общие параметры
+
+// Оболочка
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	// &._loaded {
+	// }
+}
+// Оболочка
+
+// Прибивание header и footer к верху и низу страницы;
+.main {
+	flex: 1 1 auto;
+}
+// Прибивание header и footer к верху и низу страницы;
+
+// Основная сетка
+.container {
+	max-width: $maxWidthContainer;
+	margin: 0 auto;
+	padding: 0px 15px;
+	@media (max-width: $md2) {
+		max-width: 1400px;
+	}
+	@media (max-width: $md3) {
+		max-width: 1150px;
+	}
+	@media (max-width: $md4) {
+		max-width: 970px;
+	}
+	@media (max-width: $md5) {
+		max-width: 750px;
+	}
+	@media (max-width: $md6) {
+		max-width: none;
+		padding: 0 10px;
+	}
+}
+
+//!======== Тело страницы;
+@import "header.scss";
+@import "main.scss";
+@import "footer.scss";
+//!======== Интерфейс;
+@import "ui.scss";
+//!======== формы и кнопки;
+@import "forms.scss";
+//!======== Иконки;
+@import "icons.scss";
